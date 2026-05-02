@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { HeartsRain } from "@/components/HeartsRain";
 import { Countdown } from "@/components/Countdown";
 import { Gallery } from "@/components/Gallery";
-import { LoveLanguages } from "@/components/LoveLanguages";
+import { BigHeart } from "@/components/BigHeart";
 import { LoveLetter } from "@/components/LoveLetter";
 import { Quiz } from "@/components/Quiz";
 import { SongPlayer } from "@/components/SongPlayer";
 import { EditBar } from "@/components/EditBar";
 import { EditableText } from "@/components/EditableText";
-import museumBg from "@/assets/museum-bg.jpg";
+import { StyleControls, StyleApplier } from "@/components/StyleControls";
 
 const START_DATE = "2025-12-03T00:00:00";
 
@@ -59,15 +59,8 @@ const Index = () => {
 
       {/* Hero */}
       <header className="relative min-h-[90vh] flex items-center justify-center px-6 z-10">
-        <div
-          className="absolute inset-0 -z-10"
-          style={{
-            backgroundImage: `linear-gradient(hsl(var(--background) / 0.85), hsl(var(--background) / 0.92)), url(${museumBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
         <div className="text-center max-w-3xl w-full">
+
           <p className="font-parisienne text-2xl text-muted-foreground mb-6">
             <EditableText storageKey="hero_kicker" defaultValue="— Mauricio & yo —" editMode={editMode} />
           </p>
