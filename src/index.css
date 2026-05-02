@@ -90,8 +90,7 @@
   }
 
   .ornament::before, .ornament::after {
-    content: '❦';
-    @apply mx-4 text-primary/60;
+    content: '';
   }
 }
 
