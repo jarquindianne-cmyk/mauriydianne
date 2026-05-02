@@ -115,7 +115,7 @@ const Index = () => {
       </footer>
 
       <StyleApplier />
-      {isOwner && <StyleControls editMode={editMode} />}
+      <StyleControls editMode={editMode} />
       {isOwner && <EditBar editMode={editMode} setEditMode={setEditMode} />}
     </main>
   );

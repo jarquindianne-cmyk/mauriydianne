@@ -21,7 +21,7 @@ export const StyleControls = ({ editMode }: { editMode: boolean }) => {
     document.documentElement.style.setProperty("--user-bg-color", bg);
   }, [font, color, bg]);
 
-  if (!editMode) return null;
+  
 
   return (
     <div className="fixed bottom-20 right-4 z-50 bg-card border border-border shadow-lg p-4 rounded-md flex flex-col gap-3 w-64">
