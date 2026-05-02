@@ -34,12 +34,45 @@ export const SongPlayer = ({ editMode }: { editMode: boolean }) => {
       )}
       <p className="font-script text-xl text-muted-foreground mb-6">para nosotros</p>
 
+      {/* Turntable */}
+      <div className="relative mx-auto mb-6 w-64 h-64">
+        {/* Wooden base */}
+        <div className="absolute inset-0 rounded-2xl shadow-2xl"
+          style={{ background: "linear-gradient(135deg, #6b4423, #3d2814)" }}
+        />
+        {/* Vinyl */}
+        <div
+          className={`absolute inset-4 rounded-full ${playing ? "animate-spin-slow" : ""}`}
+          style={{
+            background:
+              "repeating-radial-gradient(circle, #111 0px, #111 2px, #1a1a1a 3px, #1a1a1a 5px)",
+            boxShadow: "inset 0 0 20px rgba(0,0,0,0.8), 0 4px 10px rgba(0,0,0,0.5)",
+          }}
+        >
+          {/* Label */}
+          <div className="absolute inset-0 m-auto w-20 h-20 rounded-full flex items-center justify-center"
+            style={{ background: "hsl(var(--primary))", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
+          >
+            <div className="w-2 h-2 rounded-full bg-background" />
+          </div>
+        </div>
+        {/* Tonearm */}
+        <div
+          className="absolute top-2 right-2 origin-top-right transition-transform duration-700"
+          style={{ transform: playing ? "rotate(-25deg)" : "rotate(-55deg)" }}
+        >
+          <div className="w-2 h-2 rounded-full bg-neutral-300 shadow" />
+          <div className="w-1.5 h-32 bg-gradient-to-b from-neutral-200 to-neutral-400 ml-[1px] rounded-full" />
+          <div className="w-4 h-3 bg-neutral-700 -ml-[5px] rounded-sm" />
+        </div>
+      </div>
+
       <button
         onClick={toggle}
         disabled={!src}
-        className="w-20 h-20 rounded-full bg-primary text-primary-foreground text-3xl shadow-xl hover:scale-105 transition disabled:opacity-30"
+        className="px-6 py-3 rounded-full bg-primary text-primary-foreground text-lg shadow-xl hover:scale-105 transition disabled:opacity-30"
       >
-        {playing ? "❚❚" : "▶"}
+        {playing ? "❚❚ Pausar" : "▶ Reproducir"}
       </button>
       <audio ref={audioRef} src={src} onEnded={() => setPlaying(false)} loop />
 
