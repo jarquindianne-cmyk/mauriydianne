@@ -70,8 +70,9 @@
 @layer utilities {
   .font-script { font-family: 'Pinyon Script', cursive; }
   .font-parisienne { font-family: 'Parisienne', cursive; }
-  .font-display { font-family: 'Playfair Display', serif; }
-  .font-serif-elegant { font-family: 'Cormorant Garamond', serif; }
+  .font-display { font-family: 'Great Vibes', 'Parisienne', cursive; }
+  .font-serif-elegant { font-family: 'Dancing Script', 'Parisienne', cursive; }
+  .font-vibes { font-family: 'Great Vibes', cursive; }
 
   .vintage-frame {
     background: hsl(var(--cream));
