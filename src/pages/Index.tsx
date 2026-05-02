@@ -64,7 +64,7 @@ const Index = () => {
           <p className="font-parisienne text-2xl text-muted-foreground mb-6">
             <EditableText storageKey="hero_kicker" defaultValue="— Mauricio & yo —" editMode={editMode} />
           </p>
-          <h1 className="font-parisienne text-8xl md:text-[12rem] text-primary leading-none">
+          <h1 className="font-script text-7xl md:text-[10rem] text-primary leading-none">
             <EditableText storageKey="hero_title1" defaultValue="Cinco meses" editMode={editMode} />
           </h1>
           <p className="font-parisienne text-5xl md:text-6xl text-primary/80 mt-4">
