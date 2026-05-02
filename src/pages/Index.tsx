@@ -93,8 +93,8 @@ const Index = () => {
         <Gallery editMode={editMode} />
       </Section>
 
-      <Section id="languages" editMode={editMode} defaultKicker="En todos los idiomas" defaultTitle="Te amo">
-        <LoveLanguages />
+      <Section id="heart" editMode={editMode} defaultKicker="Mi corazón es tuyo" defaultTitle="Te amo">
+        <BigHeart />
       </Section>
 
       <Section id="letter" editMode={editMode} defaultKicker="Una carta para ti" defaultTitle="Para abrir despacio">
@@ -117,6 +117,8 @@ const Index = () => {
         </div>
       </footer>
 
+      <StyleApplier />
+      {isOwner && <StyleControls editMode={editMode} />}
       {isOwner && <EditBar editMode={editMode} setEditMode={setEditMode} />}
     </main>
   );
