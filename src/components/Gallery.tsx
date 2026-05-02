@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { useLocalState } from "@/lib/storage";
-import museumVisitors from "@/assets/museum-visitors.png";
+
 
 type Photo = { id: string; src: string; caption: string };
 
@@ -26,14 +26,8 @@ export const Gallery = ({ editMode }: { editMode: boolean }) => {
 
   return (
     <div className="relative">
-      <img
-        src={museumVisitors}
-        alt=""
-        aria-hidden
-        loading="lazy"
-        className="pointer-events-none select-none absolute -bottom-2 left-1/2 -translate-x-1/2 w-full max-w-5xl opacity-40 mix-blend-multiply"
-      />
-      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 pb-40">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
+
         {photos.map((photo, i) => (
           <figure key={photo.id} className={`group ${i % 2 ? "md:mt-12" : ""}`}>
             <button

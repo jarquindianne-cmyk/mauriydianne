@@ -57,13 +57,10 @@
 @layer base {
   * { @apply border-border; }
   body {
-    @apply bg-background text-foreground;
+    color: var(--user-text-color, hsl(var(--foreground)));
+    background-color: var(--user-bg-color, #d9c2a3);
+    background-image: none;
     font-family: 'Dancing Script', 'Parisienne', cursive;
-    background-image:
-      radial-gradient(ellipse at top, hsl(350 70% 92% / 0.95), transparent 60%),
-      radial-gradient(ellipse at bottom, hsl(340 60% 88% / 0.7), transparent 70%),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='2' seed='5'/%3E%3CfeColorMatrix values='0 0 0 0 0.4  0 0 0 0 0.3  0 0 0 0 0.2  0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-attachment: fixed;
   }
 }
 
