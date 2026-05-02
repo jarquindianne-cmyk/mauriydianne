@@ -26,7 +26,7 @@ export const HeartsRain = () => {
             opacity: h.opacity,
             animationDelay: `${h.delay}s`,
             animationDuration: `${h.duration}s`,
-            color: "hsl(45 90% 55%)",
+            color: "hsl(0 80% 50%)",
             filter: "drop-shadow(0 2px 4px hsl(345 35% 30% / 0.3))",
           }}
         >
