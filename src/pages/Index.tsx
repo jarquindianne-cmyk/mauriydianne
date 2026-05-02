@@ -68,16 +68,16 @@ const Index = () => {
           }}
         />
         <div className="text-center max-w-3xl w-full">
-          <p className="text-xs tracking-[0.5em] uppercase text-muted-foreground mb-6">
+          <p className="font-parisienne text-2xl text-muted-foreground mb-6">
             <EditableText storageKey="hero_kicker" defaultValue="— Mauricio & yo —" editMode={editMode} />
           </p>
-          <h1 className="font-script text-7xl md:text-9xl text-primary leading-none">
+          <h1 className="font-vibes text-8xl md:text-[12rem] text-primary leading-none">
             <EditableText storageKey="hero_title1" defaultValue="Cinco meses" editMode={editMode} />
           </h1>
-          <p className="font-parisienne text-4xl md:text-5xl text-primary/80 mt-2">
+          <p className="font-parisienne text-5xl md:text-6xl text-primary/80 mt-4">
             <EditableText storageKey="hero_title2" defaultValue="juntos" editMode={editMode} />
           </p>
-          <div className="font-serif-elegant italic text-lg md:text-xl text-muted-foreground mt-8 max-w-xl mx-auto">
+          <div className="font-parisienne italic text-2xl md:text-3xl text-muted-foreground mt-8 max-w-xl mx-auto">
             <EditableText
               storageKey="hero_sub"
               defaultValue="Una pequeña galería de nuestros recuerdos, tejida con amor desde el 3 de diciembre de 2025."
