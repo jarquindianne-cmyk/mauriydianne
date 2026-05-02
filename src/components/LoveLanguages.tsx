@@ -1,3 +1,5 @@
+import { Heart } from "lucide-react";
+
 const phrases = [
   { lang: "Español", text: "Te amo" },
   { lang: "Français", text: "Je t'aime" },
@@ -23,6 +25,9 @@ export const LoveLanguages = () => (
   <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
     {phrases.map((p) => (
       <div key={p.lang} className="paper border border-border/60 p-5 text-center hover:shadow-lg transition-shadow">
+        <div className="flex items-center justify-center mb-2">
+          <Heart className="w-5 h-5" fill="#e11d48" stroke="#e11d48" />
+        </div>
         <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-1">{p.lang}</div>
         <div className="font-parisienne text-3xl text-primary">{p.text}</div>
       </div>
