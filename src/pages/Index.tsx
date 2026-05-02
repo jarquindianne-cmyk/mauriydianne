@@ -88,6 +88,10 @@ const Index = () => {
         </div>
       </header>
 
+      <Section id="song" editMode={editMode} defaultKicker="Pulsa play" defaultTitle="Nuestra melodía">
+        <SongPlayer editMode={editMode} />
+      </Section>
+
       <Section id="time" editMode={editMode} defaultKicker="Cada segundo a tu lado" defaultTitle="Nuestro tiempo">
         <Countdown start={START_DATE} editMode={editMode} />
       </Section>
@@ -108,9 +112,6 @@ const Index = () => {
         <Quiz editMode={editMode} />
       </Section>
 
-      <Section id="song" editMode={editMode} defaultKicker="Pulsa play" defaultTitle="Nuestra melodía">
-        <SongPlayer editMode={editMode} />
-      </Section>
 
       <footer className="py-24 text-center relative z-10 px-6">
         <div className="ornament inline-block">
