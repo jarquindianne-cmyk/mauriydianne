@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Pinyon+Script&family=Parisienne&family=Playfair+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Pinyon+Script&family=Parisienne&family=Dancing+Script:wght@400;600;700&family=Great+Vibes&family=Playfair+Display:ital@0;1&display=swap');
 
 @layer base {
   :root {
-    --background: 38 45% 92%;
-    --foreground: 15 35% 22%;
+    --background: 350 60% 94%;
+    --foreground: 345 35% 28%;
 
-    --card: 36 50% 95%;
-    --card-foreground: 15 35% 22%;
+    --card: 350 65% 97%;
+    --card-foreground: 345 35% 28%;
 
-    --popover: 36 50% 95%;
-    --popover-foreground: 15 35% 22%;
+    --popover: 350 65% 97%;
+    --popover-foreground: 345 35% 28%;
 
-    --primary: 350 35% 45%;
+    --primary: 345 55% 50%;
     --primary-foreground: 38 45% 96%;
 
     --secondary: 28 35% 80%;
@@ -58,10 +58,10 @@
   * { @apply border-border; }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Dancing Script', 'Parisienne', cursive;
     background-image:
-      radial-gradient(ellipse at top, hsl(40 55% 90% / 0.9), transparent 60%),
-      radial-gradient(ellipse at bottom, hsl(350 30% 85% / 0.5), transparent 70%),
+      radial-gradient(ellipse at top, hsl(350 70% 92% / 0.95), transparent 60%),
+      radial-gradient(ellipse at bottom, hsl(340 60% 88% / 0.7), transparent 70%),
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='2' seed='5'/%3E%3CfeColorMatrix values='0 0 0 0 0.4  0 0 0 0 0.3  0 0 0 0 0.2  0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     background-attachment: fixed;
   }
@@ -70,8 +70,9 @@
 @layer utilities {
   .font-script { font-family: 'Pinyon Script', cursive; }
   .font-parisienne { font-family: 'Parisienne', cursive; }
-  .font-display { font-family: 'Playfair Display', serif; }
-  .font-serif-elegant { font-family: 'Cormorant Garamond', serif; }
+  .font-display { font-family: 'Great Vibes', 'Parisienne', cursive; }
+  .font-serif-elegant { font-family: 'Dancing Script', 'Parisienne', cursive; }
+  .font-vibes { font-family: 'Great Vibes', cursive; }
 
   .vintage-frame {
     background: hsl(var(--cream));
