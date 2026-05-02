@@ -93,9 +93,6 @@ const Index = () => {
         <Gallery editMode={editMode} />
       </Section>
 
-      <Section id="heart" editMode={editMode} defaultKicker="Mi corazón es tuyo" defaultTitle="Te amo">
-        <BigHeart />
-      </Section>
 
       <Section id="letter" editMode={editMode} defaultKicker="Una carta para ti" defaultTitle="Para abrir despacio">
         <LoveLetter editMode={editMode} />

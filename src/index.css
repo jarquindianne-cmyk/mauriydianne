@@ -58,8 +58,10 @@
   * { @apply border-border; }
   body {
     color: var(--user-text-color, hsl(var(--foreground)));
-    background-color: var(--user-bg-color, #d9c2a3);
-    background-image: none;
+    background-color: #fff5f0;
+    background-image: url('/src/assets/romantic-bg.jpg');
+    background-repeat: repeat;
+    background-size: 600px auto;
     font-family: 'Dancing Script', 'Parisienne', cursive;
   }
 }
@@ -88,8 +90,7 @@
   }
 
   .ornament::before, .ornament::after {
-    content: '❦';
-    @apply mx-4 text-primary/60;
+    content: '';
   }
 }
 
