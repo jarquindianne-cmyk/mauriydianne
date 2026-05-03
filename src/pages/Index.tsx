@@ -32,7 +32,7 @@ const Section = ({
       </p>
     )}
     {defaultTitle && (
-      <h2 className="text-center font-parisienne text-5xl md:text-6xl text-primary mb-12 ornament">
+      <h2 className="text-center font-curls text-5xl md:text-6xl text-primary mb-12 ornament">
         <EditableText storageKey={`sec_${id}_title`} defaultValue={defaultTitle} editMode={editMode} />
       </h2>
     )}
