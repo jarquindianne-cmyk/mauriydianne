@@ -103,6 +103,9 @@ const Index = () => {
         <Quiz editMode={editMode} />
       </Section>
 
+      <Section id="qr" editMode={editMode} defaultKicker="Llévame contigo" defaultTitle="Nuestro recuerdo en tu bolsillo">
+        <HeartQR url="https://id-preview--3db741bf-9130-4821-9afe-2d3f5283a719.lovable.app/" />
+      </Section>
 
       <footer className="py-24 text-center relative z-10 px-6">
         <div className="flex justify-center mb-8">
