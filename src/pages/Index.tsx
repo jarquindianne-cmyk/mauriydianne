@@ -9,6 +9,7 @@ import { SongPlayer } from "@/components/SongPlayer";
 import { EditBar } from "@/components/EditBar";
 import { EditableText } from "@/components/EditableText";
 import { StyleControls, StyleApplier } from "@/components/StyleControls";
+import { HeartQR } from "@/components/HeartQR";
 
 const START_DATE = "2025-12-03T00:00:00";
 
