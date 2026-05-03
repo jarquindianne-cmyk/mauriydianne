@@ -9,7 +9,6 @@ import { SongPlayer } from "@/components/SongPlayer";
 import { EditBar } from "@/components/EditBar";
 import { EditableText } from "@/components/EditableText";
 import { StyleControls, StyleApplier } from "@/components/StyleControls";
-import { HeartQR } from "@/components/HeartQR";
 
 const START_DATE = "2025-12-03T00:00:00";
 
@@ -103,9 +102,6 @@ const Index = () => {
         <Quiz editMode={editMode} />
       </Section>
 
-      <Section id="qr" editMode={editMode} defaultKicker="Llévame contigo" defaultTitle="Nuestro recuerdo en tu bolsillo">
-        <HeartQR url="https://id-preview--3db741bf-9130-4821-9afe-2d3f5283a719.lovable.app/" />
-      </Section>
 
       <footer className="py-24 text-center relative z-10 px-6">
         <div className="flex justify-center mb-8">
