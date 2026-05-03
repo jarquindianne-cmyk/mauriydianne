@@ -117,3 +117,10 @@
   to { transform: rotate(360deg); }
 }
 .animate-spin-slow { animation: spin-slow 4s linear infinite; }
+
+@keyframes heart-spin {
+  0% { transform: rotateY(0deg) scale(1); }
+  50% { transform: rotateY(180deg) scale(1.1); }
+  100% { transform: rotateY(360deg) scale(1); }
+}
+.animate-heart-spin { animation: heart-spin 3s ease-in-out infinite; transform-style: preserve-3d; }

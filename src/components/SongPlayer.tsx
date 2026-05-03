@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { useLocalState } from "@/lib/storage";
+import { EditableText } from "@/components/EditableText";
 
 export const SongPlayer = ({ editMode }: { editMode: boolean }) => {
   const [src, setSrc] = useLocalState<string>("song_src_v1", "");
@@ -32,7 +33,9 @@ export const SongPlayer = ({ editMode }: { editMode: boolean }) => {
       ) : (
         <h3 className="font-display text-2xl text-primary mb-1">{title}</h3>
       )}
-      <p className="font-script text-xl text-muted-foreground mb-6">para nosotros</p>
+      <p className="font-script text-xl text-muted-foreground mb-6">
+        <EditableText storageKey="song_subtitle_v1" defaultValue="para nosotros" editMode={editMode} />
+      </p>
 
       {/* Turntable */}
       <div className="relative mx-auto mb-6 w-64 h-64">
@@ -50,20 +53,26 @@ export const SongPlayer = ({ editMode }: { editMode: boolean }) => {
           }}
         >
           {/* Label */}
-          <div className="absolute inset-0 m-auto w-20 h-20 rounded-full flex items-center justify-center"
-            style={{ background: "hsl(var(--primary))", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
+          <div
+            className="absolute w-20 h-20 rounded-full flex items-center justify-center"
+            style={{
+              background: "hsl(var(--primary))",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
           >
             <div className="w-2 h-2 rounded-full bg-background" />
           </div>
         </div>
         {/* Tonearm */}
         <div
-          className="absolute top-2 right-2 origin-top-right transition-transform duration-700"
-          style={{ transform: playing ? "rotate(-25deg)" : "rotate(-55deg)" }}
+          className="absolute -top-2 -right-2 origin-top-right transition-transform duration-700 z-10"
+          style={{ transform: playing ? "rotate(-15deg)" : "rotate(-55deg)" }}
         >
-          <div className="w-2 h-2 rounded-full bg-neutral-300 shadow" />
-          <div className="w-1.5 h-32 bg-gradient-to-b from-neutral-200 to-neutral-400 ml-[1px] rounded-full" />
-          <div className="w-4 h-3 bg-neutral-700 -ml-[5px] rounded-sm" />
+          <div className="w-4 h-4 rounded-full bg-neutral-300 shadow ml-auto" />
+          <div className="w-1.5 h-32 bg-gradient-to-b from-neutral-200 to-neutral-400 ml-auto mr-1.5 rounded-full" />
+          <div className="w-5 h-3 bg-neutral-700 ml-auto mr-0 rounded-sm" />
         </div>
       </div>
 
