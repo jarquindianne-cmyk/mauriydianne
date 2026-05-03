@@ -9,11 +9,19 @@ export const SongPlayer = ({ editMode }: { editMode: boolean }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
-  const toggle = () => {
+  const toggle = async () => {
     if (!audioRef.current) return;
-    if (playing) audioRef.current.pause();
-    else audioRef.current.play();
-    setPlaying(!playing);
+    if (playing) {
+      audioRef.current.pause();
+      setPlaying(false);
+    } else {
+      try {
+        await audioRef.current.play();
+        setPlaying(true);
+      } catch (err) {
+        console.error("No se pudo reproducir el audio", err);
+      }
+    }
   };
 
   const handleFile = (f: File) => {
@@ -63,6 +71,9 @@ export const SongPlayer = ({ editMode }: { editMode: boolean }) => {
             }}
           >
             <div className="w-2 h-2 rounded-full bg-background" />
+            {/* Marca asimétrica para ver el giro */}
+            <div className="absolute top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-background/80" />
+            <div className="absolute bottom-2 right-2 text-[8px] text-background/70 font-bold">♥</div>
           </div>
         </div>
         {/* Tonearm */}
