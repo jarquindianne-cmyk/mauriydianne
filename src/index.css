@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Pinyon+Script&family=Parisienne&family=Dancing+Script:wght@400;600;700&family=Great+Vibes&family=Playfair+Display:ital@0;1&family=Jim+Nightshade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Pinyon+Script&family=Parisienne&family=Dancing+Script:wght@400;600;700&family=Great+Vibes&family=Playfair+Display:ital@0;1&family=Jim+Nightshade&family=Allura&family=Alex+Brush&display=swap');
 
 @layer base {
   :root {
@@ -76,7 +76,7 @@
   .font-display { font-family: 'Great Vibes', 'Parisienne', cursive; }
   .font-serif-elegant { font-family: 'Dancing Script', 'Parisienne', cursive; }
   .font-vibes { font-family: 'Great Vibes', cursive; }
-  .font-curls { font-family: 'Jim Nightshade', cursive; }
+  .font-curls { font-family: 'Allura', 'Alex Brush', cursive; }
 
   .vintage-frame {
     background: hsl(var(--cream));
