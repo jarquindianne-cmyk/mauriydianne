@@ -104,6 +104,11 @@ const Index = () => {
 
 
       <footer className="py-24 text-center relative z-10 px-6">
+        <div className="flex justify-center mb-8">
+          <div className="animate-heart-spin text-7xl md:text-8xl" style={{ color: "hsl(var(--primary))" }}>
+            ♥
+          </div>
+        </div>
         <div className="ornament inline-block">
           <span className="font-parisienne text-4xl md:text-5xl text-primary">
             <EditableText storageKey="footer_main" defaultValue="Con mucho amor para Mauricio" editMode={editMode} />
