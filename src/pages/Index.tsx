@@ -8,6 +8,7 @@ import { Quiz } from "@/components/Quiz";
 import { SongPlayer } from "@/components/SongPlayer";
 import { EditableText } from "@/components/EditableText";
 import { EditBar } from "@/components/EditBar";
+import { StyleControls } from "@/components/StyleControls";
 import { BlackCats } from "@/components/BlackCats";
 import { StarsBackground } from "@/components/StarsBackground";
 import { KissButton } from "@/components/KissButton";
@@ -135,6 +136,7 @@ const Index = () => {
       <BlackCats />
       <KissButton />
       {isOwner && <EditBar editMode={editMode} setEditMode={setEditMode} />}
+      {isOwner && editMode && <StyleControls editMode={editMode} />}
     </main>
   );
 };
