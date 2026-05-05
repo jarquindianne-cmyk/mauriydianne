@@ -71,12 +71,12 @@
 }
 
 @layer utilities {
-  .font-script { font-family: 'Pinyon Script', cursive; }
-  .font-parisienne { font-family: 'Parisienne', cursive; }
-  .font-display { font-family: 'Great Vibes', 'Parisienne', cursive; }
-  .font-serif-elegant { font-family: 'Dancing Script', 'Parisienne', cursive; }
-  .font-vibes { font-family: 'Great Vibes', cursive; }
-  .font-curls { font-family: 'Allura', 'Alex Brush', cursive; }
+  .font-script { font-family: 'Lora', serif; }
+  .font-parisienne { font-family: 'Lora', serif; }
+  .font-display { font-family: 'Lora', serif; }
+  .font-serif-elegant { font-family: 'Lora', serif; }
+  .font-vibes { font-family: 'Lora', serif; }
+  .font-curls { font-family: 'Lora', serif; font-style: italic; }
 
   .vintage-frame {
     background: hsl(var(--cream));
