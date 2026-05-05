@@ -1,0 +1,28 @@
+
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[33m[vite:css] @import must precede all other statements (besides @charset or empty @layer)
+3  |  @tailwind utilities;
+4  |  
+5  |  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Pinyon+Script&family=Parisienne&family=Dancing+Script:wght@400;600;700&family=Great+Vibes&family=Playfair+Display:ital@0;1&family=Jim+Nightshade&family=Allura&family=Alex+Brush&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+6  |  
+7  |  @layer base {[39m
+[32m✓[39m 6 modules transformed.
+[31mx[39m Build failed in 2.75s
+[31merror during build:
+[31m[vite]: Rollup failed to resolve import "@tanstack/query-core" from "C:/Users/dayan/mauriydianne/node_modules/.pnpm/@tanstack+react-query@5.100.9_react@18.3.1/node_modules/@tanstack/react-query/build/modern/index.js".
+This is most likely unintended because it can break your application at runtime.
+If you do want to externalize this module explicitly add it to
+`build.rollupOptions.external`[31m
+    at viteWarn (file:///C:/Users/dayan/mauriydianne/node_modules/.pnpm/vite@5.4.21_@types+node@22.19.17/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:65855:17)
+    at onwarn (file:///C:/Users/dayan/mauriydianne/node_modules/.pnpm/@vitejs+plugin-react-swc@3._d7307b688f7f7f0948607aeb70a70d44/node_modules/@vitejs/plugin-react-swc/index.js:90:7)
+    at onRollupWarning (file:///C:/Users/dayan/mauriydianne/node_modules/.pnpm/vite@5.4.21_@types+node@22.19.17/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:65885:5)
+    at onwarn (file:///C:/Users/dayan/mauriydianne/node_modules/.pnpm/vite@5.4.21_@types+node@22.19.17/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:65550:7)
+    at file:///C:/Users/dayan/mauriydianne/node_modules/.pnpm/rollup@4.60.2/node_modules/rollup/dist/es/shared/node-entry.js:21397:13
+    at Object.logger [as onLog] (file:///C:/Users/dayan/mauriydianne/node_modules/.pnpm/rollup@4.60.2/node_modules/rollup/dist/es/shared/node-entry.js:23378:9)
+    at ModuleLoader.handleInvalidResolvedId (file:///C:/Users/dayan/mauriydianne/node_modules/.pnpm/rollup@4.60.2/node_modules/rollup/dist/es/shared/node-entry.js:22122:26)
+    at file:///C:/Users/dayan/mauriydianne/node_modules/.pnpm/rollup@4.60.2/node_modules/rollup/dist/es/shared/node-entry.js:22080:26[39m
